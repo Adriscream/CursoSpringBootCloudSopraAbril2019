@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class Consumidor {
 
 	@RabbitListener(queues={"spring-boot"})
-	public void procesar(String mensaje){
-		System.out.println("Recibido mensaje ->" + mensaje);
+	public void procesar(Usuario usuario){
+		System.out.println("Recibido mensaje ->" + usuario);
 	}
 	
 }
