@@ -30,13 +30,15 @@ public class MiFiltro extends OncePerRequestFilter{
 		//Custom user:password:rol1,rol2,rol3
 		String header = request.getHeader("Authorization");
 		
-		//Este es el Principal
-		UsernamePasswordAuthenticationToken authRequest 
-			= extraerDeLaCabeceraLaInformacionParaGenerarElPrincipal(header);
-		
-		if(authRequest != null){
-		
-			SecurityContextHolder.getContext().setAuthentication(authRequest);
+		if(header != null){
+			//Este es el Principal
+			UsernamePasswordAuthenticationToken authRequest 
+				= extraerDeLaCabeceraLaInformacionParaGenerarElPrincipal(header);
+			
+			if(authRequest != null){
+			
+				SecurityContextHolder.getContext().setAuthentication(authRequest);
+			}
 		}
 		
 		//Responsabilidad ultima es llegar al resurso, luego indicamos que se ejecute el siguiente
