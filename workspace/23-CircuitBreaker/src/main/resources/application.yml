@@ -1,0 +1,22 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: cliente-circuit-breaker
+
+# Permite exponer el endpoint /actuator/hystrix.stream, que desde Spring boot 2, forma parte de Actuator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+holamundo:
+  ribbon:
+    MaxAutoRetries: 3
+    MaxAutoRetriesNextServer: 3
+    OkToRetryOnAllOperations: true
+    ConnectTimeout: 1
+    ServerListRefreshInterval: 1000
