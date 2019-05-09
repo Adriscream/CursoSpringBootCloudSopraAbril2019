@@ -103,7 +103,7 @@ public class ConfiguracionOauth extends AuthorizationServerConfigurerAdapter {
 				.secret("secret")
 				.authorizedGrantTypes("client_credentials", "authorization_code", "refresh_token")
 				.scopes("read", "write") //Scopes que la aplicacion cliente pedira a cada usuario que le concedan
-				.redirectUris("http://localhost:8083/client/") //URL a la que se redirigirá al usuario una vez finalizada la autenticacion
+				.redirectUris("http://192.168.0.137:8083/client/") //URL a la que se redirigirá al usuario una vez finalizada la autenticacion
 
 				.and()
 				

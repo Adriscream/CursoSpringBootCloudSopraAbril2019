@@ -10,6 +10,6 @@ config:
     oauth2:
         clientID: confidential
         clientSecret: secret
-        accessTokenUri: http://localhost:8081/oauth/token
-        userAuthorizationUri: http://localhost:8081/oauth/authorize
-        resourceURI: http://localhost:8082/api/
+        accessTokenUri: http://192.168.0.137:8081/oauth/token
+        userAuthorizationUri: http://192.168.0.137:8081/oauth/authorize
+        resourceURI: http://192.168.0.137:8082/api/

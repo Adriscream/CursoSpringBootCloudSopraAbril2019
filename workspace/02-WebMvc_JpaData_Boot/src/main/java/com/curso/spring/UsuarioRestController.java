@@ -24,9 +24,9 @@ public class UsuarioRestController {
 	@PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
 	public Usuario nuevoUsuario(@RequestBody Usuario usuario){
 		
-		usuarioRepository.save(usuario);
+		Usuario resultado = usuarioRepository.save(usuario);
 		
-		return usuario;
+		return resultado;
 	}
 	
 	@GetMapping(produces=MediaType.APPLICATION_JSON_VALUE)
